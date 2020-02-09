@@ -1,13 +1,182 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper{
+  font-family: 'Montserrat', sans-serif;
+  color: #323232;
+}
+
+header{
+  height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.slider{
+  margin:20px 0 20px 0;
+  height: 300px;
+}
+
+.slide{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(98.3deg, #93E08C -1.93%, #78CEBF 97.03%);
+  border-radius: 10px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.next{
+  opacity: 0.3;
+  width: 50px;
+  position: absolute;
+  right: 0;
+}
+.prev{
+  opacity: 0.3;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.next:hover, .prev:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.article{
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.article h2{
+  padding: 10px 0 10px 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.contacts{
+  min-height: 100px;
+}
+
+.contacts-header h2{
+  padding: 10px 0 10px 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+footer{
+  height: 100px;
+  background: #323232;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper span{
+  font-size: 13px;
+}
+
+.input-wrapper input{
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 8px 0 15px 0;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.input-wrapper input.big{
+  height: 142px;
+}
+.input-wrapper input.small{
+  height: 50px;
+}
+
+.input-wrapper input:focus{
+  border: 1px solid #93E08C;
+  outline-color:#93E08C; /* Параметры рамки */
+}
+
+.cb-wrapper{
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  margin: 20px 0 20px 0;
+}
+
+.cb-wrapper>span{
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+}
+
+.cb-wrapper>span span{
+  color: #93E08C;
+}
+
+.cb-wrapper input{
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  border: 1px solid #C9C9C9;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 1;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.cb-wrapper:hover input ~ .checkmark {
+  background-color: rgb(233, 230, 230);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cb-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb-wrapper .checkmark:after {
+  width: 17px;
+  height: 17px;
+  background-image: url('Vector.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-1{
+  font-weight: 600;
+  margin-top: 10px;
+  border: none;
+  width: 192px;
+  height: 42px;
+  background: linear-gradient(98.3deg, #93E08C -1.93%, #78CEBF 97.03%);
+  border-radius: 3px;
 }
