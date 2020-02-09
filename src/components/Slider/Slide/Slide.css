@@ -1,0 +1,31 @@
+.slide{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    left: 0%;
+  }
+  
+  .one, .two, .three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 100%;
+    font-size: 40px;
+  }
+  
+  .one{
+    background: linear-gradient(98.3deg, #93E08C -1.93%, #78CEBF 97.03%);
+  }
+  
+  .two{
+    background: linear-gradient(98.3deg, rgb(252, 255, 83) -1.93%, rgb(255, 217, 0) 97.03%);
+  }
+  
+  .three{
+    background: linear-gradient(98.3deg, rgb(23, 255, 216) -1.93%, rgb(1, 217, 255) 97.03%);
+  }
+  
